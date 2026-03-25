@@ -33,7 +33,7 @@
 <div id="loc-card-CapG" onclick="setLocFilter('CapG')" style="background:#fff;border:2px solid #e8ecf0;border-radius:10px;padding:14px;cursor:pointer;transition:all .15s;display:flex;flex-direction:column;"><div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px"><div><div style="font-family:Barlow Condensed,sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#0d0d0d;line-height:1.15">Capital Grille</div><div style="font-size:9px;color:#8a97a8;margin-top:1px">Charlotte</div></div><span style="font-size:8px;font-weight:700;text-transform:uppercase;padding:2px 7px;border-radius:20px;background:#f0fdf4;color:#16a34a;flex-shrink:0">CLT</span></div><div style="display:flex;align-items:baseline;gap:4px;margin-bottom:8px"><div id="lc-total-CapG" style="font-family:Barlow Condensed,sans-serif;font-size:36px;font-weight:700;color:#1a9cd8;line-height:1">0</div><div style="font-size:9px;color:#8a97a8">reviews</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:6px"><div style="background:#f8f9fa;border-radius:5px;padding:5px 7px;border:1px solid #f0f2f4"><div style="font-size:8px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8a97a8;margin-bottom:1px">Avg (3mo)</div><div id="lc-avg-CapG" style="font-size:14px;font-family:Barlow Condensed,sans-serif;font-weight:700;color:#8a97a8">&mdash;</div></div><div style="background:#f8f9fa;border-radius:5px;padding:5px 7px;border:1px solid #f0f2f4"><div style="font-size:8px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8a97a8;margin-bottom:1px">Action (3mo)</div><div id="lc-act-CapG" style="font-size:14px;font-family:Barlow Condensed,sans-serif;font-weight:700;color:#16a34a">0</div></div></div><div style="margin-bottom:4px"><div style="font-size:8px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#8a97a8;margin-bottom:3px">Top &#11088; Emp Mentions</div><div id="lc-top-CapG" style="font-size:9px;color:#b0b8c4;font-style:italic">None yet</div>
 <div id="lc-kpi-CapG" style="margin-top:6px;padding-top:6px;border-top:1px solid #f0f2f4"><div style="font-size:9px;color:#8a97a8;font-style:italic">This month: loading...</div></div></div><div style="margin-top:auto;padding-top:8px;border-top:1px solid #f0f2f4"><span style="font-size:8px;font-weight:700;padding:2px 8px;border-radius:20px;background:#DA374318;color:#DA3743">OpenTable</span></div></div>
 </div>
-<div class="filters"><span class="fl">Filter:</span><div class="fb" data-f="all" onclick="setF('all')" style="background:#e8f6fd;border-color:#1a9cd8;color:#1282b5">All</div><div class="fb" data-f="new" onclick="setF('new')">New</div><div class="fb" data-f="valet" onclick="setF('valet')">&#128663; Valet</div><div class="fb" data-f="emp" onclick="setF('emp')">&#128100; Employee</div><div class="fb" data-f="5star" onclick="setF('5star')">5 Star</div><div class="fb" data-f="low" onclick="setF('low')">Low (1-3)</div><div class="fb" data-f="action" onclick="setF('action')">&#128680; Action</div><div class="fb" data-f="structural" onclick="setF('structural')">&#127959; Structural</div><div style="margin-left:auto;position:relative"><span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:11px;color:#8a97a8">&#128269;</span><input type="text" id="search-q" placeholder="Search name, text..." oninput="renderReviews()" style="padding:5px 10px 5px 28px;border:1.5px solid #d0d8e0;border-radius:20px;font-family:Barlow,sans-serif;font-size:11px;outline:none;width:200px;"></div></div>
+<div class="filters"><span class="fl">Filter:</span><div class="fb" data-f="all" onclick="setF('all')" style="background:#e8f6fd;border-color:#1a9cd8;color:#1282b5">All</div><div class="fb" data-f="new" onclick="setF('new')">New</div><div class="fb" data-f="valet" onclick="setF('valet')">&#128663; Valet</div><div class="fb" data-f="emp" onclick="setF('emp')">&#128100; Employee</div><div class="fb" data-f="5star" onclick="setF('5star')">5 Star</div><div class="fb" data-f="low" onclick="setF('low')">Low (1-3)</div><div class="fb" data-f="action" onclick="setF('action')">&#128680; Action</div><div class="fb" data-f="void" onclick="setF('void')">&#128683; Void</div><div style="margin-left:auto;position:relative"><span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:11px;color:#8a97a8">&#128269;</span><input type="text" id="search-q" placeholder="Search name, text..." oninput="renderReviews()" style="padding:5px 10px 5px 28px;border:1.5px solid #d0d8e0;border-radius:20px;font-family:Barlow,sans-serif;font-size:11px;outline:none;width:200px;"></div></div>
 <div id="rv-count" style="font-size:10px;color:#8a97a8;margin-bottom:10px"></div>
 <div class="rv-grid" id="rv-grid"></div>
 <details style="margin-top:20px"><summary style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#8a97a8;cursor:pointer;user-select:none;padding:8px 2px;list-style:none;display:flex;align-items:center;gap:6px"><span>&#43;</span> Add Single Review Manually</summary><div class="card" style="margin-top:8px"><div class="card-body"><div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:8px"><div class="fg"><div class="flbl">Location</div><select class="fs" id="f-loc"><option value="SBM">Courtyard Marriott</option><option value="Chima">Chima Steakhouse</option><option value="STK">STK Charlotte</option><option value='RC'>Ruth's Chris</option><option value="CapG">Capital Grille</option></select></div><div class="fg"><div class="flbl">Source</div><select class="fs" id="f-src"><option>Google</option><option>OpenTable</option><option>Yelp</option><option>TripAdvisor</option><option>Other</option></select></div><div class="fg"><div class="flbl">Date</div><input class="fi" type="date" id="f-date"></div><div class="fg"><div class="flbl">Rating</div><div style="display:flex;gap:3px;margin-top:4px"><button class="sb" data-v="1" onclick="setStar(1)">&#9733;</button><button class="sb" data-v="2" onclick="setStar(2)">&#9733;</button><button class="sb" data-v="3" onclick="setStar(3)">&#9733;</button><button class="sb" data-v="4" onclick="setStar(4)">&#9733;</button><button class="sb" data-v="5" onclick="setStar(5)">&#9733;</button></div></div></div><div class="fg" style="margin-bottom:8px;max-width:340px"><div class="flbl">Reviewer Name</div><input class="fi" id="f-rev" placeholder="e.g. John D."></div><div class="fg" style="margin-bottom:8px"><div class="flbl">Review Text</div><textarea class="fta" id="f-text" placeholder="Paste review text..." style="min-height:80px"></textarea></div><button class="btn btn-ghost" onclick="addManual()">Add Review</button></div></div></details>
@@ -56,7 +56,9 @@ const LOCS = [
 
 const CUTOFF_BY_LOC = {SBM:'2024-01',Chima:'2025-01',STK:'2025-01',RC:'2025-01',CapG:'2025-01'};
 // Review count KPI targets per month
-const KPI_TARGETS = {SBM:5, Chima:10, STK:10, RC:10, CapG:10};
+// KPI targets computed dynamically from average monthly review count
+// Fallback minimum used when insufficient data
+const KPI_MIN = {SBM:3, Chima:3, STK:3, RC:3, CapG:3};
 
 const EMP_BY_LOC = {"SBM": ["Adam Delinski", "Alexander Hesters", "Annalessya Smith", "Anthony Garza", "Brandon Hendrickson", "Brandon Yup", "Brisa Camacho", "Brodie Fogarty", "Bryan Contreras", "Bryce Cassel", "Bryce Tolle", "Camren Gargis", "Chance Whitesell", "Chelbi Hampton", "Christopher Dayhuff", "Cris McCormick", "David Mathison", "Derek Guy", "Dmitri Nickell", "Gregorio Damian", "Hayden Fox", "Hudson Fox", "Jacob Egenlauf", "Jacob farmwald", "Jose Cruz", "Joshua Casey", "Juan Santillan", "Kaley Gann", "Kevin Mark", "Korey Alexander", "Marivel Lopez", "Matthew Rochefort", "Michael Schultz", "Mya Pereira", "Natalie Pereira", "Nicholas Grout", "Owen Zultanski", "Robert Nabieu", "Taylor Yoder", "Wyatt Gordy"], "Chima": ["Alfred Chester", "Andrew Mountzouros", "Austen Rienhardt", "Benny Davis", "Breana White", "Donye Williams", "Elijah Ford", "Elijah Ybarra", "Elizabeth Shen", "Grant Parker", "Henk Allen", "Jayla Stevenson", "John Robbs", "Juan Quintana", "Kaleb Brown-Mims", "Katelyn Winebarger", "Kylique Walker", "Ronnell Wilson", "Savannah Fleetwood", "Sean Alexander", "Thurston Stewart", "Tyler Felten", "Tyler McNally", "Tyrone Reaves Jr", "Victoria Hill", "William Bender", "Xavier Wallace", "Yves Jean-Gilles", "keyvaun cobb"], "STK": ["Alfred Chester", "Andrew Mountzouros", "Austen Rienhardt", "Benny Davis", "Breana White", "Cade Cuda", "Elijah Ybarra", "Elizabeth Shen", "Henk Allen", "Jayla Stevenson", "John Robbs", "Jordan Davis", "Juan Quintana", "Kaleb Brown-Mims", "Katelyn Winebarger", "Kylique Walker", "Ronnell Wilson", "Ryan Caves", "Savannah Fleetwood", "Sean Alexander", "Tavari Carter", "Thurston Stewart", "Tyler Felten", "Tyler McNally", "Victoria Hill", "Wesley Clark", "William Bender", "Yves Jean-Gilles", "keyvaun cobb"], "RC": ["Alfred Chester", "Andrew Mountzouros", "Austen Rienhardt", "Benny Davis", "Breana White", "Elijah Ybarra", "Elizabeth Shen", "Henk Allen", "Jayla Stevenson", "John Robbs", "Juan Quintana", "Kaleb Brown-Mims", "Katelyn Winebarger", "Kylique Walker", "Ronnell Wilson", "Savannah Fleetwood", "Sean Alexander", "Thurston Stewart", "Tyler Felten", "Tyler McNally", "Victoria Hill", "William Bender", "Yves Jean-Gilles", "keyvaun cobb"], "CapG": ["Aarya Sahasrabudhe", "Alfred Chester", "Amari Lawrence", "Andrei Todorovic", "Andrew Decker", "Andrew Mountzouros", "Anton Sweeney", "Areg Hajinian", "Austen Rienhardt", "Benny Davis", "Brayden Corwin", "Breana White", "Brennan Teasley", "Camden Tatum", "Cameron Jordan", "Carson Parry", "Carter Page", "Christian Hines", "Christian Santilli", "Christopher Linton", "Dana King", "Danesha Glaze", "Dillon Gilkey", "Elijah Ybarra", "Elizabeth Shen", "Emma Leon", "Ethan Major", "Ethan Marks", "Fletcher McDowell", "Heidi Zuck", "Henk Allen", "Jack Kilstrom", "Jackson Fix", "Jahmia Marcelle", "Jalen Brown", "Jan Uon Ksor", "Jarese Adams", "Jayla Stevenson", "Jaylin Ferguson", "Jefferson Turcios", "Jeffrey Neeley", "John Robbs", "Joshua Mason", "Joshua Ramey", "Juan Quintana", "Julian Jackson", "Justin Rogers", "Kaleb Brown-Mims", "Katelyn Winebarger", "Kayla Boamah", "KeSean Jenkins", "Kyle Fox", "Kylique Walker", "Makaela Goldman", "Mark Sherrill", "Marquis Fowler", "Mathiu Rochom", "Maximilliano Rodriguez", "Mohammed Jamhour", "Mountaga Ly", "Nehemiah Pulley", "Oliver Hoehne", "Reilly Tomlin", "Ronnell Wilson", "Ryan Chambers", "Samuel Page", "Savannah Fleetwood", "Sean Alexander", "Silas Mackins", "Simmone Washington", "Spencer Edens", "Sylvia Joseph", "Talen Bates", "Thurston Stewart", "Trace Allen", "Tyler Felten", "Tyler McNally", "Victoria Hill", "Walif Alqolaq", "Walker Brown", "Waseem Alqolaq", "William Bender", "Wossen Kefyalew", "Yoel Abraham", "Yousif Fadul", "Yves Jean-Gilles", "arielle anderson", "dejon rawlins", "keyvaun cobb", "sa'mone ethridge"]};
 const ALL_EMP_NAMES = ["Aarya Sahasrabudhe", "Adam Delinski", "Alexander Hesters", "Alfred Chester", "Amari Lawrence", "Andrei Todorovic", "Andrew Decker", "Andrew Mountzouros", "Annalessya Smith", "Anthony Garza", "Anton Sweeney", "Areg Hajinian", "Austen Rienhardt", "Benny Davis", "Brandon Hendrickson", "Brandon Yup", "Brayden Corwin", "Breana White", "Brennan Teasley", "Brisa Camacho", "Brodie Fogarty", "Bryan Contreras", "Bryce Cassel", "Bryce Tolle", "Cade Cuda", "Camden Tatum", "Cameron Jordan", "Camren Gargis", "Carson Parry", "Carter Page", "Chance Whitesell", "Chelbi Hampton", "Christian Hines", "Christian Santilli", "Christopher Dayhuff", "Christopher Linton", "Cris McCormick", "Dana King", "Danesha Glaze", "David Mathison", "Derek Guy", "Dillon Gilkey", "Dmitri Nickell", "Donye Williams", "Elijah Ford", "Elijah Ybarra", "Elizabeth Shen", "Emma Leon", "Ethan Major", "Ethan Marks", "Fletcher McDowell", "Grant Parker", "Gregorio Damian", "Hayden Fox", "Heidi Zuck", "Henk Allen", "Hudson Fox", "Jack Kilstrom", "Jackson Fix", "Jacob Egenlauf", "Jacob farmwald", "Jahmia Marcelle", "Jalen Brown", "Jan Uon Ksor", "Jarese Adams", "Jayla Stevenson", "Jaylin Ferguson", "Jefferson Turcios", "Jeffrey Neeley", "John Robbs", "Jordan Davis", "Jose Cruz", "Joshua Casey", "Joshua Mason", "Joshua Ramey", "Juan Quintana", "Juan Santillan", "Julian Jackson", "Justin Rogers", "Justin Thornburg", "Kaleb Brown-Mims", "Kaley Gann", "Katelyn Winebarger", "Kayla Boamah", "KeSean Jenkins", "Kevin Mark", "Korey Alexander", "Kyle Fox", "Kylique Walker", "Makaela Goldman", "Marivel Lopez", "Mark Sherrill", "Marquis Fowler", "Mathiu Rochom", "Matthew Rochefort", "Maximilliano Rodriguez", "Michael Schultz", "Mohammed Jamhour", "Mountaga Ly", "Mya Pereira", "Natalie Pereira", "Nehemiah Pulley", "Nicholas Grout", "Oliver Hoehne", "Owen Zultanski", "Reilly Tomlin", "Robert Nabieu", "Ronnell Wilson", "Ryan Caves", "Ryan Chambers", "Samuel Page", "Savannah Fleetwood", "Sean Alexander", "Silas Mackins", "Simmone Washington", "Spencer Edens", "Sylvia Joseph", "Talen Bates", "Tavari Carter", "Taylor Yoder", "Thurston Stewart", "Trace Allen", "Tyler Felten", "Tyler McNally", "Tyrone Reaves Jr", "Victoria Hill", "Walif Alqolaq", "Walker Brown", "Waseem Alqolaq", "Wesley Clark", "William Bender", "Wossen Kefyalew", "Wyatt Gordy", "Xavier Wallace", "Yoel Abraham", "Yousif Fadul", "Yves Jean-Gilles", "arielle anderson", "dejon rawlins", "keyvaun cobb", "sa'mone ethridge"];
@@ -130,7 +132,7 @@ function parseOpenTablePaste(raw,locKey){
       var text=textParts.join(' ').trim().replace(/\s*Read\s+(less|more)\s*/gi,' ').trim();
       if(!isJunkText(text)&&text.length>15){
         var emps=detectEmps(text+' '+reviewer,locKey);
-        results.push({id:'rv_'+Date.now()+'_'+Math.random().toString(36).slice(2,5),loc:locKey,source:'OpenTable',date:dateStr,rating:rating,reviewer:reviewer,emps:emps,text:text,needsAction:rating<=2&&hasValet(text),structural:false,isNew:true,aiScanned:false,addedAt:new Date().toISOString()});
+        results.push({id:'rv_'+Date.now()+'_'+Math.random().toString(36).slice(2,5),loc:locKey,source:'OpenTable',date:dateStr,rating:rating,reviewer:reviewer,emps:emps,text:text,needsAction:rating<=2&&hasValet(text),voided:false,isNew:true,aiScanned:false,addedAt:new Date().toISOString()});
       }
       i=j;
     }else{i++;}
@@ -175,7 +177,7 @@ function parseGooglePaste(raw,locKey){
       results.push({id:'rv_'+Date.now()+'_'+Math.random().toString(36).slice(2,5),loc:locKey,
         source:dateLine.match(/tripadvisor/i)?'TripAdvisor':dateLine.match(/opentable/i)?'OpenTable':locKey==='SBM'?'Google':'OpenTable',
         date:dateStr,rating:rating,reviewer:cleanName(reviewer),emps:emps,text:text,
-        needsAction:rating<=2&&hasValet(text),structural:false,isNew:true,aiScanned:false,addedAt:new Date().toISOString()});
+        needsAction:rating<=2&&hasValet(text),voided:false,isNew:true,aiScanned:false,addedAt:new Date().toISOString()});
       i=j;
     }else{i++;}
   }
@@ -307,7 +309,7 @@ function locStats(key){
   var cutoff=threeMonthsAgo();
   var recent=all.filter(function(r){return (r.date||'')>=cutoff;});
   var avg3=recent.length?(recent.reduce(function(s,r){return s+r.rating;},0)/recent.length).toFixed(1):null;
-  var action3=recent.filter(function(r){return r.needsAction&&!r.structural;}).length;
+  var action3=recent.filter(function(r){return r.needsAction&&!r.voided;}).length;
   var empCount={};
   all.filter(function(r){return r.rating===5;}).forEach(function(r){
     (r.emps||[]).forEach(function(e){if(e&&e.trim())empCount[e]=(empCount[e]||0)+1;});
@@ -316,16 +318,26 @@ function locStats(key){
   // KPI: reviews this month vs target
   var thisMonth=new Date().toISOString().slice(0,7);
   var thisMonthCount=all.filter(function(r){return (r.date||'')=== thisMonth;}).length;
-  var target=KPI_TARGETS[key]||5;
+  // Dynamic KPI target: average monthly review count for this location
+  // Group reviews by month, compute average across months with data
+  var byMonth={};
+  all.forEach(function(r){if(r.date){byMonth[r.date]=(byMonth[r.date]||0)+1;}});
+  var months=Object.keys(byMonth).filter(function(m){return byMonth[m]>0;});
+  var dynTarget;
+  if(months.length>=2){
+    dynTarget=Math.max(KPI_MIN[key]||3, Math.round(months.reduce(function(s,m){return s+byMonth[m];},0)/months.length));
+  }else{
+    dynTarget=KPI_MIN[key]||3; // fallback when less than 2 months of data
+  }
   return{total:all.length,recent:recent.length,avg3:avg3,action3:action3,top5:top5,
-    kpiThis:thisMonthCount,kpiTarget:target,kpiPct:Math.min(100,Math.round(thisMonthCount/target*100))};
+    kpiThis:thisMonthCount,kpiTarget:dynTarget,kpiPct:Math.min(100,Math.round(thisMonthCount/dynTarget*100))};
 }
 
 function renderStats(){
   var t=reviews.length,avg=t?(reviews.reduce(function(s,r){return s+r.rating;},0)/t).toFixed(1):0;
   var wE=reviews.filter(function(r){return (r.emps||[]).length>0;}).length;
   var wV=reviews.filter(function(r){return hasValet(r.text);}).length;
-  var wA=reviews.filter(function(r){return r.needsAction&&!r.structural;}).length;
+  var wA=reviews.filter(function(r){return r.needsAction&&!r.voided;}).length;
   var wN=reviews.filter(function(r){return r.isNew;}).length;
   var updates={'stat-total':{v:t,c:'#1a9cd8'},'stat-avg':{v:avg||'—',c:+avg>=4.5?'#16a34a':+avg>=3?'#d97706':'#dc2626'},
     'stat-new':{v:wN,c:wN?'#1a9cd8':'#8a97a8'},'stat-emp':{v:wE,c:'#7c3aed'},'stat-valet':{v:wV,c:'#1282b5'},
@@ -372,8 +384,8 @@ function filteredRvs(){
     if(fFilter==='emp'&&!(r.emps||[]).length)return false;
     if(fFilter==='5star'&&r.rating!==5)return false;
     if(fFilter==='low'&&r.rating>3)return false;
-    if(fFilter==='action'&&(!r.needsAction||r.structural))return false;
-    if(fFilter==='structural'&&!r.structural)return false;
+    if(fFilter==='action'&&(!r.needsAction||r.voided))return false;
+    if(fFilter==='void'&&!r.voided)return false;
     if(q&&(r.text||'').toLowerCase().indexOf(q)===-1&&(r.reviewer||'').toLowerCase().indexOf(q)===-1&&(r.emps||[]).join(' ').toLowerCase().indexOf(q)===-1)return false;
     return true;
   });
@@ -401,13 +413,13 @@ function handleCardAction(el){
     reviews=reviews.filter(function(x){return x.id!==id;});
     renderAll();saveData();toast('Deleted');
   }else if(action==='flag'){
-    var r=reviews.find(function(x){return x.id===id;});if(r){r.needsAction=true;r.structural=false;renderAll();saveData();}
+    var r=reviews.find(function(x){return x.id===id;});if(r){r.needsAction=true;r.voided=false;renderAll();saveData();}
   }else if(action==='resolve'){
-    var r2=reviews.find(function(x){return x.id===id;});if(r2){r2.needsAction=false;r2.structural=false;renderAll();saveData();}
-  }else if(action==='structural'){
-    var r3=reviews.find(function(x){return x.id===id;});if(r3){r3.structural=true;r3.needsAction=false;renderAll();saveData();}
-  }else if(action==='unstructural'){
-    var r4=reviews.find(function(x){return x.id===id;});if(r4){r4.structural=false;renderAll();saveData();}
+    var r2=reviews.find(function(x){return x.id===id;});if(r2){r2.needsAction=false;r2.voided=false;renderAll();saveData();}
+  }else if(action==='void'){
+    var r3=reviews.find(function(x){return x.id===id;});if(r3){r3.voided=true;r3.needsAction=false;renderAll();saveData();}
+  }else if(action==='unvoid'){
+    var r4=reviews.find(function(x){return x.id===id;});if(r4){r4.voided=false;renderAll();saveData();}
   }else if(action==='clearnew'){
     var r5=reviews.find(function(x){return x.id===id;});if(r5){r5.isNew=false;renderAll();saveData();}
   }else if(action==='addemp'){
@@ -449,20 +461,20 @@ function renderReviews(){
     if(emps.length)     tags.push('<span style="background:#f5f3ff;color:#7c3aed;font-size:9px;padding:2px 8px;border-radius:20px;font-weight:700">&#128100; '+emps.length+' emp</span>');
     if(r.rating>=4)     tags.push('<span style="background:#f0fdf4;color:#16a34a;font-size:9px;padding:2px 8px;border-radius:20px;font-weight:700">Positive</span>');
     if(r.rating<=2)     tags.push('<span style="background:#fef2f2;color:#dc2626;font-size:9px;padding:2px 8px;border-radius:20px;font-weight:700">Negative</span>');
-    if(r.needsAction&&!r.structural) tags.push('<span style="background:#fef2f2;color:#dc2626;border:1px solid rgba(239,68,68,.25);font-size:9px;padding:2px 8px;border-radius:20px;font-weight:700">&#128680; Action</span>');
-    if(r.structural)    tags.push('<span style="background:#faf5ff;color:#7c3aed;border:1px solid #e9d5ff;font-size:9px;padding:2px 8px;border-radius:20px;font-weight:700">&#127959; Structural</span>');
-    var border=r.needsAction&&!r.structural?'#ef4444':r.structural?'#a78bfa':'#e8ecf0';
-    var extra=(r.needsAction&&!r.structural?'border-left:3px solid #ef4444;':r.structural?'border-left:3px solid #a78bfa;':'')+(r.isNew?'border-top:2px solid #1a9cd8;':'');
+    if(r.needsAction&&!r.voided) tags.push('<span style="background:#fef2f2;color:#dc2626;border:1px solid rgba(239,68,68,.25);font-size:9px;padding:2px 8px;border-radius:20px;font-weight:700">&#128680; Action</span>');
+    if(r.voided)    tags.push('<span style="background:#faf5ff;color:#7c3aed;border:1px solid #e9d5ff;font-size:9px;padding:2px 8px;border-radius:20px;font-weight:700">&#128683; Void</span>');
+    var border=r.needsAction&&!r.voided?'#ef4444':r.voided?'#a78bfa':'#e8ecf0';
+    var extra=(r.needsAction&&!r.voided?'border-left:3px solid #ef4444;':r.voided?'border-left:3px solid #a78bfa;':'')+(r.isNew?'border-top:2px solid #1a9cd8;':'');
     // Action buttons
     var actionBtn='';
-    if(r.needsAction&&!r.structural){
+    if(r.needsAction&&!r.voided){
       actionBtn='<button data-action="resolve" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid rgba(34,197,94,.3);color:#16a34a;background:transparent">&#10003; Resolve</button>'
-        +'<button data-action="structural" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid #a78bfa;color:#7c3aed;background:transparent" title="Mark as a known structural constraint we cannot change">&#127959; Structural</button>';
-    }else if(r.structural){
-      actionBtn='<button data-action="unstructural" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid #e9d5ff;color:#7c3aed;background:transparent">&#8617; Unflag</button>';
+        +'<button data-action="void" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid #a78bfa;color:#7c3aed;background:transparent" title="Void — mark as outside our control (parking cost, noise level, etc.)">&#128683; Void</button>';
+    }else if(r.voided){
+      actionBtn='<button data-action="unvoid" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid #e9d5ff;color:#7c3aed;background:transparent">&#8617; Un-void</button>';
     }else{
       actionBtn='<button data-action="flag" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid rgba(245,158,11,.3);color:#d97706;background:transparent">&#128680; Flag</button>'
-        +'<button data-action="structural" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid #e9d5ff;color:#7c3aed;background:transparent" title="Known constraint we cannot change">&#127959; Structural</button>';
+        +'<button data-action="void" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid #e9d5ff;color:#7c3aed;background:transparent" title="Known constraint outside our control — voids action item">&#128683; Void</button>';
     }
     var deleteBtn='<button data-action="delete" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid rgba(239,68,68,.2);color:#dc2626;background:transparent">Delete</button>';
     var clearBtn=r.isNew?'<button data-action="clearnew" data-id="'+r.id+'" onclick="handleCardAction(this)" style="font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;font-family:Barlow,sans-serif;font-weight:700;border:1.5px solid #e8ecf0;color:#8a97a8;background:transparent">Clear New</button>':'';
@@ -488,7 +500,7 @@ function addManual(){
   if(!text){toast('Review text required');return;}
   var loc=document.getElementById('f-loc').value;
   var emps=detectEmps(text,loc);
-  reviews.unshift({id:'rv_m_'+Date.now(),loc:loc,source:document.getElementById('f-src').value,date:document.getElementById('f-date').value||new Date().toISOString().slice(0,10),rating:starVal,reviewer:document.getElementById('f-rev').value.trim()||'Anonymous',emps:emps,text:text,needsAction:false,structural:false,isNew:true,aiScanned:false,addedAt:new Date().toISOString()});
+  reviews.unshift({id:'rv_m_'+Date.now(),loc:loc,source:document.getElementById('f-src').value,date:document.getElementById('f-date').value||new Date().toISOString().slice(0,10),rating:starVal,reviewer:document.getElementById('f-rev').value.trim()||'Anonymous',emps:emps,text:text,needsAction:false,voided:false,isNew:true,aiScanned:false,addedAt:new Date().toISOString()});
   document.getElementById('f-text').value='';document.getElementById('f-rev').value='';
   renderAll();saveData();toast('Review added');
 }
@@ -500,8 +512,8 @@ function onLocChange(){
   if(otBtn){otBtn.href=loc.otUrl||'#';otBtn.style.opacity=loc.otUrl?'1':'0.35';otBtn.style.pointerEvents=loc.otUrl?'auto':'none';}
 }
 function exportCSV(){
-  var headers=['Date','Location','Rating','Reviewer','Source','Employees','Needs Action','Structural','Valet','Review Text'];
-  var rows=reviews.map(function(r){return[r.date||'',LOCMAP[r.loc]||r.loc||'',r.rating||'','"'+(r.reviewer||'').replace(/"/g,'""')+'"',r.source||'','"'+(r.emps||[]).join(', ').replace(/"/g,'""')+'"',r.needsAction&&!r.structural?'Yes':'No',r.structural?'Yes':'No',hasValet(r.text)?'Yes':'No','"'+(r.text||'').slice(0,500).replace(/"/g,'""').replace(/\r?\n/g,' ')+'"'].join(',');});
+  var headers=['Date','Location','Rating','Reviewer','Source','Employees','Needs Action','Voided','Valet','Review Text'];
+  var rows=reviews.map(function(r){return[r.date||'',LOCMAP[r.loc]||r.loc||'',r.rating||'','"'+(r.reviewer||'').replace(/"/g,'""')+'"',r.source||'','"'+(r.emps||[]).join(', ').replace(/"/g,'""')+'"',r.needsAction&&!r.voided?'Yes':'No',r.voided?'Yes':'No',hasValet(r.text)?'Yes':'No','"'+(r.text||'').slice(0,500).replace(/"/g,'""').replace(/\r?\n/g,' ')+'"'].join(',');});
   var csv=[headers.join(',')].concat(rows).join('\n');
   var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='sophi_reviews_'+new Date().toISOString().slice(0,10)+'.csv';a.click();toast('CSV downloaded');
 }
